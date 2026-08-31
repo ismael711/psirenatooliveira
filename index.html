@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renato Oliveira · Psicólogo</title>
+  <meta name="description" content="Psicólogo Clínico especializado em Terapia Cognitivo-Comportamental (TCC). Psicologia baseada em evidências para promover saúde mental, autoconhecimento e qualidade de vida." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="#hero" class="navbar__logo">
+        <span class="navbar__dot"></span>
+        <span><strong>Renato Oliveira</strong> · Psicólogo</span>
+      </a>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#trabalho" class="navbar__link">Trabalho</a>
+        <a href="#sobre" class="navbar__link">Sobre</a>
+        <a href="#empresas" class="navbar__link">Empresas</a>
+        <a href="#processo" class="navbar__link">Processo</a>
+        <a href="#faq" class="navbar__link">FAQ</a>
+      </nav>
+      <a href="#contato" class="btn btn--accent">Agendar</a>
+      <button class="navbar__burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <p class="hero__badge">CRP · TCC <span class="hero__badge-line"></span> PSICOLOGIA CLÍNICA</p>
+        <h1 class="hero__title">
+          Renato<br>
+          <em>Oliveira</em><span class="accent-dot">.</span>
+        </h1>
+        <p class="hero__subtitle">Psicólogo Clínico · Terapia Cognitivo-Comportamental (TCC)</p>
+        <p class="hero__description">
+          Psicologia baseada em evidências para promover saúde mental, autoconhecimento e qualidade de vida — auxiliando pessoas a enfrentarem os desafios da vida pessoal e profissional.
+        </p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--accent">Agendar consulta <span class="btn__arrow">→</span></a>
+          <a href="#trabalho" class="btn btn--outline">Conheça meu trabalho</a>
+        </div>
+      </div>
+      <div class="hero__image-wrap reveal reveal--right">
+        <div class="hero__image-frame">
+          <!-- Substitua pelo caminho da sua foto: assets/images/renato-hero.jpg -->
+          <img src="assets/images/renato-hero.jpg" alt="Renato Oliveira, Psicólogo" class="hero__photo" onerror="this.parentElement.classList.add('hero__image-frame--empty')" />
+          <div class="hero__deco-lines" aria-hidden="true">
+            <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 300 Q80 200 180 100" stroke="#c8a84b" stroke-width="0.8" opacity="0.4"/>
+              <path d="M30 300 Q100 200 200 100" stroke="#c8a84b" stroke-width="0.8" opacity="0.3"/>
+              <path d="M50 300 Q120 200 200 120" stroke="#c8a84b" stroke-width="0.8" opacity="0.2"/>
+              <path d="M0 280 Q70 180 160 80" stroke="#c8a84b" stroke-width="0.6" opacity="0.25"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TRABALHO
+  ═══════════════════════════════════════════ -->
+  <section class="trabalho" id="trabalho">
+    <div class="container">
+
+      <!-- Card 01 -->
+      <div class="trabalho__card reveal">
+        <div class="trabalho__card-image">
+          <!-- assets/images/trabalho-psicoterapia.jpg -->
+          <img src="assets/images/trabalho-psicoterapia.jpg" alt="Espaço de psicoterapia" onerror="this.parentElement.classList.add('img--empty')" />
+        </div>
+        <div class="trabalho__card-content">
+          <p class="trabalho__number"><span class="accent">01</span> PSICOTERAPIA</p>
+          <h2 class="trabalho__title">Escuta clínica com base científica</h2>
+          <p class="trabalho__text">A psicoterapia é um espaço seguro de acolhimento, escuta e desenvolvimento pessoal. Por meio da Terapia Cognitivo-Comportamental (TCC), abordagem baseada em evidências científicas, auxilio pessoas no enfrentamento da ansiedade, depressão, estresse, burnout, baixa autoestima, dificuldades nos relacionamentos, luto e outras demandas relacionadas à saúde mental.</p>
+        </div>
+      </div>
+
+      <!-- Card 02 -->
+      <div class="trabalho__card trabalho__card--reverse reveal">
+        <div class="trabalho__card-image">
+          <!-- assets/images/trabalho-online.jpg -->
+          <img src="assets/images/trabalho-online.jpg" alt="Atendimento online" onerror="this.parentElement.classList.add('img--empty')" />
+        </div>
+        <div class="trabalho__card-content">
+          <p class="trabalho__number"><span class="accent">02</span> ATENDIMENTO ONLINE</p>
+          <h2 class="trabalho__title">Terapia onde você estiver</h2>
+          <p class="trabalho__text">O atendimento online oferece a mesma qualidade e segurança da consulta presencial, com a praticidade de se conectar de qualquer lugar. Sessões por videoconferência, com sigilo, ética e total presença terapêutica.</p>
+        </div>
+      </div>
+
+      <!-- Card 03 -->
+      <div class="trabalho__card reveal">
+        <div class="trabalho__card-image">
+          <!-- assets/images/trabalho-humanizado.jpg -->
+          <img src="assets/images/trabalho-humanizado.jpg" alt="Atendimento humanizado" onerror="this.parentElement.classList.add('img--empty')" />
+        </div>
+        <div class="trabalho__card-content">
+          <p class="trabalho__number"><span class="accent">03</span> ATENDIMENTO HUMANIZADO</p>
+          <h2 class="trabalho__title">Cada história merece cuidado próprio</h2>
+          <p class="trabalho__text">Cada pessoa possui uma história única. Meu objetivo é oferecer um atendimento ético, acolhedor e individualizado, respeitando as necessidades de cada paciente e utilizando estratégias fundamentadas na ciência.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SOBRE
+  ═══════════════════════════════════════════ -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre__inner">
+      <div class="sobre__image-wrap reveal">
+        <div class="sobre__image-frame">
+          <!-- assets/images/renato-sobre.jpg -->
+          <img src="assets/images/renato-sobre.jpg" alt="Renato Oliveira" onerror="this.parentElement.classList.add('img--empty')" />
+          <div class="sobre__deco-lines" aria-hidden="true">
+            <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 300 Q80 200 180 100" stroke="#c8a84b" stroke-width="0.8" opacity="0.4"/>
+              <path d="M30 300 Q100 200 200 100" stroke="#c8a84b" stroke-width="0.8" opacity="0.3"/>
+              <path d="M50 300 Q120 200 200 120" stroke="#c8a84b" stroke-width="0.8" opacity="0.2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="sobre__content reveal reveal--right">
+        <p class="section-label">SOBRE MIM</p>
+        <h2 class="sobre__title">Olá, sou <em>Renato</em>.</h2>
+        <div class="sobre__bio">
+          <p>Sou psicólogo formado pela <em>Universidade Cruzeiro do Sul</em>, com pós-graduação em <em>Neuropsicologia</em> pela Universidade Anhembi Morumbi.</p>
+          <p>Minha atuação clínica é fundamentada na Terapia Cognitivo-Comportamental (TCC), uma abordagem amplamente respaldada por evidências científicas e reconhecida por sua eficácia.</p>
+          <p>Tenho experiência em atendimento clínico e busco oferecer um espaço de escuta qualificada, acolhimento e desenvolvimento.</p>
+          <p>Além da prática clínica, construí uma trajetória de mais de 15 anos na área de Recursos Humanos, com ampla experiência em Recrutamento e Seleção, desenvolvimento de pessoas e saúde mental no contexto organizacional.</p>
+          <p>Também possuo conhecimentos sólidos sobre saúde mental no trabalho e fatores psicossociais relacionados à NR-01.</p>
+          <p>Meu compromisso é oferecer um atendimento ético, acolhedor e baseado na ciência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EMPRESAS
+  ═══════════════════════════════════════════ -->
+  <section class="empresas" id="empresas">
+    <div class="container">
+      <div class="empresas__card reveal">
+        <div class="empresas__bg-image">
+          <!-- assets/images/empresas-bg.jpg -->
+          <img src="assets/images/empresas-bg.jpg" alt="" role="presentation" onerror="this.parentElement.classList.add('img--empty')" />
+        </div>
+        <div class="empresas__content">
+          <div class="empresas__left">
+            <p class="section-label">PARA EMPRESAS</p>
+            <h2 class="empresas__title">Saúde mental como <em>infraestrutura</em> organizacional.</h2>
+            <p class="empresas__text">Também desenvolvo ações voltadas à promoção da saúde mental no ambiente de trabalho, prevenção de riscos psicossociais, qualidade de vida, orientação sobre a NR-01 e apoio às organizações na construção de ambientes mais saudáveis.</p>
+            <a href="#contato" class="btn btn--accent">Solicitar contato <span class="btn__arrow">→</span></a>
+          </div>
+          <div class="empresas__services">
+            <div class="empresas__service-item">
+              <span>Diagnóstico de riscos psicossociais</span>
+              <span class="empresas__bullet"></span>
+            </div>
+            <div class="empresas__service-item">
+              <span>Palestras e workshops</span>
+              <span class="empresas__bullet"></span>
+            </div>
+            <div class="empresas__service-item">
+              <span>Acompanhamento de lideranças</span>
+              <span class="empresas__bullet"></span>
+            </div>
+            <div class="empresas__service-item">
+              <span>Consultoria em NR-01</span>
+              <span class="empresas__bullet"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROCESSO
+  ═══════════════════════════════════════════ -->
+  <section class="processo" id="processo">
+    <div class="container">
+      <div class="processo__header reveal">
+        <div class="processo__header-left">
+          <p class="section-label">COMO FUNCIONA</p>
+          <h2 class="processo__title">Um caminho <em>claro</em>,<br>conduzido com cuidado.</h2>
+        </div>
+        <div class="processo__header-right">
+          <p class="processo__subtitle">Uma jornada estruturada em quatro momentos, respeitando o seu ritmo em cada etapa.</p>
+        </div>
+      </div>
+      <div class="processo__steps reveal">
+        <div class="processo__step">
+          <p class="processo__step-label"><span class="processo__step-dot"></span> ETAPA 01</p>
+          <h3 class="processo__step-title">Agendamento</h3>
+          <div class="processo__step-line"></div>
+          <p class="processo__step-text">Um primeiro contato simples e sem compromisso para entender sua demanda e alinhar horários.</p>
+        </div>
+        <div class="processo__step">
+          <p class="processo__step-label"><span class="processo__step-dot"></span> ETAPA 02</p>
+          <h3 class="processo__step-title">Primeira sessão</h3>
+          <div class="processo__step-line"></div>
+          <p class="processo__step-text">Um encontro de acolhimento para conhecer sua história, expectativas e objetivos com a terapia.</p>
+        </div>
+        <div class="processo__step">
+          <p class="processo__step-label"><span class="processo__step-dot"></span> ETAPA 03</p>
+          <h3 class="processo__step-title">Plano terapêutico</h3>
+          <div class="processo__step-line"></div>
+          <p class="processo__step-text">Definição de um caminho individualizado, com base em evidências e no seu momento de vida.</p>
+        </div>
+        <div class="processo__step">
+          <p class="processo__step-label"><span class="processo__step-dot"></span> ETAPA 04</p>
+          <h3 class="processo__step-title">Acompanhamento</h3>
+          <div class="processo__step-line"></div>
+          <p class="processo__step-text">Sessões regulares com escuta, ajustes e revisão de metas ao longo do processo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════ -->
+  <section class="faq" id="faq">
+    <div class="container faq__inner">
+      <div class="faq__left reveal">
+        <p class="section-label">FAQ</p>
+        <h2 class="faq__title">Dúvidas <em>frequentes</em>.</h2>
+        <p class="faq__note">Se sua pergunta não estiver aqui, escreva pelo WhatsApp — respondo pessoalmente.</p>
+      </div>
+      <div class="faq__list reveal reveal--right">
+
+        <div class="faq__item faq__item--open">
+          <button class="faq__question" aria-expanded="true">
+            <span>Como funciona a primeira sessão?</span>
+            <span class="faq__icon">×</span>
+          </button>
+          <div class="faq__answer">
+            <p>A primeira sessão é um encontro de acolhimento, onde conversamos sobre sua história, o que motivou a busca por terapia e como podemos construir juntos um caminho de cuidado.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Você atende online ou presencialmente?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Atendo tanto online quanto presencialmente em São Paulo, SP. O atendimento online oferece a mesma qualidade e sigilo da consulta presencial, com a comodidade de você se conectar de onde estiver.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Qual a duração e frequência das sessões?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>As sessões têm duração de 50 minutos. A frequência recomendada é semanal, especialmente no início do processo, podendo ser ajustada conforme a evolução e necessidade de cada paciente.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>A Terapia Cognitivo-Comportamental funciona para quais casos?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>A TCC é indicada para uma ampla variedade de demandas, incluindo ansiedade, depressão, estresse, burnout, fobias, TOC, dificuldades nos relacionamentos, baixa autoestima, luto e outros desafios emocionais e comportamentais.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Você trabalha com empresas?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Sim. Ofereço serviços para empresas como diagnóstico de riscos psicossociais, palestras e workshops, acompanhamento de lideranças e consultoria em NR-01. Entre em contato para entender como posso apoiar sua organização.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTATO
+  ═══════════════════════════════════════════ -->
+  <section class="contato" id="contato">
+    <div class="container contato__inner">
+      <div class="contato__left reveal">
+        <p class="section-label">CONTATO</p>
+        <h2 class="contato__title">Vamos <em>conversar</em><span class="accent-dot">.</span></h2>
+        <p class="contato__subtitle">O primeiro passo pode ser uma mensagem. Estarei pronto para ouvir com atenção e clareza.</p>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="contato__whatsapp">
+          <span class="contato__whatsapp-label">WHATSAPP</span>
+          <span class="contato__whatsapp-text">Enviar mensagem</span>
+          <span class="contato__whatsapp-arrow">↗</span>
+        </a>
+      </div>
+      <div class="contato__right reveal reveal--right">
+        <div class="contato__card">
+          <p class="section-label">OUTROS CANAIS</p>
+          <div class="contato__channels">
+            <div class="contato__channel">
+              <span class="contato__channel-label">INSTAGRAM</span>
+              <a href="https://instagram.com/renatooliveira.psi" target="_blank" rel="noopener" class="contato__channel-value">@renatooliveira.psi ↗</a>
+            </div>
+            <div class="contato__channel">
+              <span class="contato__channel-label">LINKEDIN</span>
+              <a href="https://linkedin.com/in/renatooliveira" target="_blank" rel="noopener" class="contato__channel-value">in/renatooliveira ↗</a>
+            </div>
+            <div class="contato__channel">
+              <span class="contato__channel-label">E-MAIL</span>
+              <a href="mailto:contato@renatooliveira.psi.br" class="contato__channel-value">contato@renatooliveira.psi.br ↗</a>
+            </div>
+            <div class="contato__channel">
+              <span class="contato__channel-label">ATENDIMENTO</span>
+              <span class="contato__channel-value">Online · São Paulo, SP ↗</span>
+            </div>
+          </div>
+          <div class="contato__map">
+            <iframe
+              title="Localização São Paulo"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-46.6800,-23.5800,-46.6400,-23.5500&layer=mapnik"
+              loading="lazy"
+              style="border:0; width:100%; height:200px; border-radius:8px; filter:grayscale(1) brightness(0.8);"
+            ></iframe>
+            <div class="contato__map-footer">
+              <span>Atendimento presencial · São Paulo</span>
+              <span class="accent">Sob agendamento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="navbar__dot"></span>
+        <span><strong>Renato Oliveira</strong> · Psicólogo</span>
+      </div>
+      <p class="footer__copy">© 2025 Renato Oliveira. CRP · TCC · Psicologia Clínica.</p>
+      <div class="footer__links">
+        <a href="https://instagram.com/renatooliveira.psi" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://linkedin.com/in/renatooliveira" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:contato@renatooliveira.psi.br">E-mail</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

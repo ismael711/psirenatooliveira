@@ -11,14 +11,10 @@
   const navbar = document.getElementById('navbar');
 
   function onScroll() {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run once on load
+  onScroll();
 
   /* ────────────────────────────────────
      2. MOBILE MENU — burger toggle
@@ -26,12 +22,11 @@
   const burger  = document.getElementById('navBurger');
   const navMenu = document.getElementById('navMenu');
 
-  burger.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('is-open');
-    burger.setAttribute('aria-expanded', isOpen);
-    // Animate burger into × shape
+  function setMenuOpen(open) {
+    navMenu.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
     const spans = burger.querySelectorAll('span');
-    if (isOpen) {
+    if (open) {
       spans[0].style.transform = 'translateY(7px) rotate(45deg)';
       spans[1].style.opacity   = '0';
       spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
@@ -40,17 +35,24 @@
       spans[1].style.opacity   = '';
       spans[2].style.transform = '';
     }
+  }
+
+  burger.addEventListener('click', () => {
+    setMenuOpen(!navMenu.classList.contains('is-open'));
   });
 
   // Close menu when a link is clicked
   navMenu.querySelectorAll('.navbar__link').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('is-open');
-      const spans = burger.querySelectorAll('span');
-      spans[0].style.transform = '';
-      spans[1].style.opacity   = '';
-      spans[2].style.transform = '';
-    });
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  // Close menu on outside click
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('is-open') &&
+        !navMenu.contains(e.target) &&
+        !burger.contains(e.target)) {
+      setMenuOpen(false);
+    }
   });
 
   /* ────────────────────────────────────
@@ -63,18 +65,17 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Stagger siblings within the same parent
-          const siblings = entry.target.parentElement.querySelectorAll('.reveal');
-          siblings.forEach((el, i) => {
-            if (el === entry.target) {
-              entry.target.style.transitionDelay = `${i * 0.12}s`;
-            }
-          });
+          const siblings = Array.from(
+            entry.target.parentElement.querySelectorAll('.reveal')
+          );
+          const idx = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = `${idx * 0.1}s`;
           entry.target.classList.add('is-visible');
           revealObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
   );
 
   revealEls.forEach(el => revealObserver.observe(el));
@@ -85,9 +86,7 @@
   const faqItems = document.querySelectorAll('.faq__item');
 
   faqItems.forEach(item => {
-    const btn    = item.querySelector('.faq__question');
-    const answer = item.querySelector('.faq__answer');
-    const icon   = item.querySelector('.faq__icon');
+    const btn = item.querySelector('.faq__question');
 
     btn.addEventListener('click', () => {
       const isOpen = item.classList.contains('faq__item--open');
@@ -96,14 +95,12 @@
       faqItems.forEach(i => {
         i.classList.remove('faq__item--open');
         i.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
-        i.querySelector('.faq__icon').textContent = '+';
       });
 
-      // Open clicked (if it was closed)
+      // Open clicked item if it was previously closed
       if (!isOpen) {
         item.classList.add('faq__item--open');
         btn.setAttribute('aria-expanded', 'true');
-        icon.textContent = '×';
       }
     });
   });
@@ -111,8 +108,8 @@
   /* ────────────────────────────────────
      5. ACTIVE NAV LINK — highlight on scroll
   ──────────────────────────────────── */
-  const sections  = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.navbar__link');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navbar__link');
 
   const sectionObserver = new IntersectionObserver(
     (entries) => {
@@ -128,7 +125,7 @@
         }
       });
     },
-    { threshold: 0.35 }
+    { threshold: 0.3 }
   );
 
   sections.forEach(section => sectionObserver.observe(section));
@@ -141,20 +138,10 @@
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const offset = navbar ? navbar.offsetHeight : 0;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
-    });
-  });
-
-  /* ────────────────────────────────────
-     7. EMPRESAS SERVICES — hover effect
-  ──────────────────────────────────── */
-  document.querySelectorAll('.empresas__service-item').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      item.querySelector('.empresas__bullet').style.transform = 'scale(1.4)';
-    });
-    item.addEventListener('mouseleave', () => {
-      item.querySelector('.empresas__bullet').style.transform = 'scale(1)';
     });
   });
 

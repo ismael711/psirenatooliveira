@@ -1,0 +1,21 @@
+{
+  "name": "Renato Oliveira · Psicólogo",
+  "short_name": "Psi Renato",
+  "description": "Psicólogo CRP 06/180185 — Terapia Cognitivo-Comportamental online",
+  "start_url": "/psirenatooliveira/",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#f5b700",
+  "icons": [
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

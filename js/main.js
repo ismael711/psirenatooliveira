@@ -106,6 +106,43 @@
   });
 
   /* ────────────────────────────────────
+     4b. DEMANDAS — accordion (um aberto por vez)
+  ──────────────────────────────────── */
+  const demandaCards = document.querySelectorAll('.demanda-card');
+
+  demandaCards.forEach(card => {
+    const btn = card.querySelector('.demanda-card__toggle');
+
+    btn.addEventListener('click', () => {
+      const isOpen = card.classList.contains('demanda-card--open');
+
+      demandaCards.forEach(c => {
+        c.classList.remove('demanda-card--open');
+        c.querySelector('.demanda-card__toggle').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        card.classList.add('demanda-card--open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Mesma altura para todos os cards fechados (acompanha o maior título)
+  const demandaToggles = document.querySelectorAll('.demanda-card__toggle');
+
+  const equalizeDemandaCards = () => {
+    demandaToggles.forEach(t => { t.style.minHeight = ''; });
+    const maxH = Math.max(...Array.from(demandaToggles, t => t.offsetHeight));
+    demandaToggles.forEach(t => { t.style.minHeight = maxH + 'px'; });
+  };
+
+  equalizeDemandaCards();
+  window.addEventListener('resize', equalizeDemandaCards);
+  window.addEventListener('load', equalizeDemandaCards);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(equalizeDemandaCards);
+
+  /* ────────────────────────────────────
      5. ACTIVE NAV LINK — highlight on scroll
   ──────────────────────────────────── */
   const sections = document.querySelectorAll('section[id]');

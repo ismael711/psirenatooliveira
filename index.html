@@ -10,8 +10,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
   <link rel="manifest" href="assets/icons/site.webmanifest" />
-  <meta name="theme-color" content="#f5b700" />
-  <meta name="msapplication-TileColor" content="#0d0d0d" />
+  <meta name="theme-color" content="#800000" />
+  <meta name="msapplication-TileColor" content="#800000" />
   <meta name="msapplication-TileImage" content="assets/icons/android-chrome-192x192.png" />
 
   <!-- ═══ SEO — Title & Description ═══ -->
@@ -258,52 +258,116 @@
         </div>
         <div class="demandas__grid reveal">
           <div class="demanda-card">
-            <span class="demanda-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </span>
-            <span class="demanda-card__label">Ansiedade e Estresse</span>
+            <button type="button" class="demanda-card__toggle" id="demanda-btn-0" aria-expanded="false" aria-controls="demanda-panel-0">
+              <span class="demanda-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </span>
+              <span class="demanda-card__label">Ansiedade e Estresse</span>
+              <span class="demanda-card__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></span>
+            </button>
+            <div class="demanda-card__panel" id="demanda-panel-0" role="region" aria-labelledby="demanda-btn-0">
+              <div class="demanda-card__panel-inner">
+                <p>Preocupação constante, tensão no corpo e dificuldade de desacelerar. A terapia ajuda a entender esses gatilhos e a lidar melhor com eles.</p>
+              </div>
+            </div>
           </div>
           <div class="demanda-card">
-            <span class="demanda-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07-6.07-.71.71M6.34 17.66l-.71.71m12.02 0-.71-.71M6.34 6.34l-.71-.71M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
-            </span>
-            <span class="demanda-card__label">Depressão e Desânimo</span>
+            <button type="button" class="demanda-card__toggle" id="demanda-btn-1" aria-expanded="false" aria-controls="demanda-panel-1">
+              <span class="demanda-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07-6.07-.71.71M6.34 17.66l-.71.71m12.02 0-.71-.71M6.34 6.34l-.71-.71M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+              </span>
+              <span class="demanda-card__label">Depressão e Desânimo</span>
+              <span class="demanda-card__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></span>
+            </button>
+            <div class="demanda-card__panel" id="demanda-panel-1" role="region" aria-labelledby="demanda-btn-1">
+              <div class="demanda-card__panel-inner">
+                <p>Falta de energia, tristeza persistente e perda de interesse nas coisas. A terapia oferece um espaço seguro para compreender e cuidar do que você sente.</p>
+              </div>
+            </div>
           </div>
           <div class="demanda-card">
-            <span class="demanda-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            </span>
-            <span class="demanda-card__label">Burnout e Esgotamento</span>
+            <button type="button" class="demanda-card__toggle" id="demanda-btn-2" aria-expanded="false" aria-controls="demanda-panel-2">
+              <span class="demanda-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </span>
+              <span class="demanda-card__label">Burnout e Esgotamento</span>
+              <span class="demanda-card__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></span>
+            </button>
+            <div class="demanda-card__panel" id="demanda-panel-2" role="region" aria-labelledby="demanda-btn-2">
+              <div class="demanda-card__panel-inner">
+                <p>Cansaço extremo causado pelo excesso de trabalho e cobrança. A terapia ajuda a reconhecer limites e reconstruir o equilíbrio.</p>
+              </div>
+            </div>
           </div>
           <div class="demanda-card">
-            <span class="demanda-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-            </span>
-            <span class="demanda-card__label">TOC</span>
+            <button type="button" class="demanda-card__toggle" id="demanda-btn-3" aria-expanded="false" aria-controls="demanda-panel-3">
+              <span class="demanda-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </span>
+              <span class="demanda-card__label">TOC</span>
+              <span class="demanda-card__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></span>
+            </button>
+            <div class="demanda-card__panel" id="demanda-panel-3" role="region" aria-labelledby="demanda-btn-3">
+              <div class="demanda-card__panel-inner">
+                <p>Pensamentos repetitivos e comportamentos que parecem difíceis de controlar. A terapia trabalha estratégias para reduzir o sofrimento que eles causam.</p>
+              </div>
+            </div>
           </div>
           <div class="demanda-card">
-            <span class="demanda-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            </span>
-            <span class="demanda-card__label">Relacionamentos Difíceis</span>
+            <button type="button" class="demanda-card__toggle" id="demanda-btn-4" aria-expanded="false" aria-controls="demanda-panel-4">
+              <span class="demanda-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </span>
+              <span class="demanda-card__label">Relacionamentos Difíceis</span>
+              <span class="demanda-card__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></span>
+            </button>
+            <div class="demanda-card__panel" id="demanda-panel-4" role="region" aria-labelledby="demanda-btn-4">
+              <div class="demanda-card__panel-inner">
+                <p>Conflitos, dificuldade de comunicação ou padrões que se repetem. A terapia ajuda a melhorar a forma de se relacionar.</p>
+              </div>
+            </div>
           </div>
           <div class="demanda-card">
-            <span class="demanda-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </span>
-            <span class="demanda-card__label">Traumas, Luto e Perdas</span>
+            <button type="button" class="demanda-card__toggle" id="demanda-btn-5" aria-expanded="false" aria-controls="demanda-panel-5">
+              <span class="demanda-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </span>
+              <span class="demanda-card__label">Traumas, Luto e Perdas</span>
+              <span class="demanda-card__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></span>
+            </button>
+            <div class="demanda-card__panel" id="demanda-panel-5" role="region" aria-labelledby="demanda-btn-5">
+              <div class="demanda-card__panel-inner">
+                <p>Dores que ficam depois de eventos marcantes ou da perda de alguém. A terapia acolhe esse processo no seu ritmo.</p>
+              </div>
+            </div>
           </div>
           <div class="demanda-card">
-            <span class="demanda-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-            </span>
-            <span class="demanda-card__label">Baixa Autoestima e Autoconhecimento</span>
+            <button type="button" class="demanda-card__toggle" id="demanda-btn-6" aria-expanded="false" aria-controls="demanda-panel-6">
+              <span class="demanda-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+              </span>
+              <span class="demanda-card__label">Baixa Autoestima e Autoconhecimento</span>
+              <span class="demanda-card__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></span>
+            </button>
+            <div class="demanda-card__panel" id="demanda-panel-6" role="region" aria-labelledby="demanda-btn-6">
+              <div class="demanda-card__panel-inner">
+                <p>Insegurança, autocrítica excessiva e dúvidas sobre quem você é. A terapia ajuda a se conhecer melhor e a construir uma relação mais gentil consigo.</p>
+              </div>
+            </div>
           </div>
           <div class="demanda-card">
-            <span class="demanda-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
-            </span>
-            <span class="demanda-card__label">Transições de Vida e Carreira</span>
+            <button type="button" class="demanda-card__toggle" id="demanda-btn-7" aria-expanded="false" aria-controls="demanda-panel-7">
+              <span class="demanda-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+              </span>
+              <span class="demanda-card__label">Transições de Vida e Carreira</span>
+              <span class="demanda-card__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></span>
+            </button>
+            <div class="demanda-card__panel" id="demanda-panel-7" role="region" aria-labelledby="demanda-btn-7">
+              <div class="demanda-card__panel-inner">
+                <p>Mudanças, decisões difíceis e fases de incerteza. A terapia ajuda a clarear caminhos e a lidar com o novo.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -192,6 +192,13 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
   background: var(--gold);
   flex-shrink: 0;
 }
+.brand-logo {
+  height: 30px;
+  width: auto;
+  flex-shrink: 0;
+}
+.brand-logo--footer { height: 38px; }
+
 .navbar__nav {
   display: flex;
   align-items: center;
@@ -514,6 +521,17 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
   font-size: 0.83rem;
   color: var(--text-muted);
   line-height: 1.4;
+}
+.diferencial__card-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-top: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -854,6 +872,23 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
 }
 .footer__instagram-handle {
   font-size: 0.82rem;
+}
+.footer__notice {
+  font-size: 0.78rem;
+  color: var(--offwhite);
+  line-height: 1.65;
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.footer__notice strong {
+  display: block;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.2rem;
 }
 .footer__legal {
   font-size: 0.74rem;
